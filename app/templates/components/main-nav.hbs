@@ -1,0 +1,6 @@
+<div class="nav-bar">
+  {{#link-to "application" class="nav-link" }}MAIN{{/link-to}}
+  {{#if session.isAuthenticated}}
+    {{#link-to "posts" class="nav-link" }}POSTS{{/link-to}}
+  {{/if}}
+</div>

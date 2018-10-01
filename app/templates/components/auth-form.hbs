@@ -1,0 +1,11 @@
+{{#if session.isAuthenticated}}
+  <div class="auth-form">
+    {{session.currentUser.email}}
+    <button {{action "signOut"}} class="auth-btn">Sign out</button>
+  </div>
+{{else}}
+  <div class="auth-form">
+    {{input type="email" value=email placeholder="admin@gmail.com"}} {{input type="password" value=password placeholder="123456"}}
+    <button class="auth-btn" {{action "signIn"}}>Sign In</button>
+  </div>
+{{/if}}

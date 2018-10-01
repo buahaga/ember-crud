@@ -1,0 +1,13 @@
+<form class="post-publish">
+  <div class="post-header">
+    <h3>New Post:</h3>
+    <button class="post-remove" {{action "closeForm" post}}>&#10007;</button>
+  </div>
+  <div class="post-input">
+    {{input value=title placeholder="title"}}
+  </div>
+  <div class="post-input">
+    {{textarea value=body placeholder="body"}}
+  </div>
+  <button {{action "publishPost"}} class="post-button">Publish</button>
+</form>

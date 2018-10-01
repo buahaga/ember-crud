@@ -2,7 +2,17 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-crud',
+    firebase: {
+      apiKey: 'AIzaSyDwT4pipSwNXI68Vl45hqWItC_W1t8XNHY',
+      authDomain: 'ember-crud-f9141.firebaseapp.com/',
+      databaseURL: "https://ember-crud-f9141.firebaseio.com",
+      projectId: "ember-crud-f9141",
+      storageBucket: 'gs://ember-crud-f9141.appspot.com'
+    },
+    torii: {
+      sessionServiceName: 'session'
+    },
+    modulePrefix: 'ember-app',
     environment,
     rootURL: '/',
     locationType: 'auto',

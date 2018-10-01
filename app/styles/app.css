@@ -1,0 +1,117 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.menu {
+  display: flex;
+  background: lightgreen;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+.content {
+  padding: 10px;
+}
+.nav-link {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.nav-link:hover {
+  background: darkgreen;
+}
+.auth-form {
+  padding: 10px;
+}
+.auth-btn {
+  padding: 3px;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.auth-btn:hover {
+  background: darkgreen;
+}
+.post-item,
+.post-publish {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 30%;
+  margin: 1%;
+  padding: 10px;
+  border: thin solid grey;
+  box-shadow: 5px 5px 2px lightgrey;
+  transition: all 0.3s;
+}
+.post-header {
+  display: flex;
+  justify-content: space-between;
+}
+.post-controls {
+  display: none;
+  transition: all 0.3s;
+}
+.post-edit,
+.post-update,
+.post-remove {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 24px;
+  color: darkgreen;
+  cursor: pointer;
+}
+.post-remove {
+  color: darkred;
+}
+.post-item:hover {
+  background: lightgrey;
+}
+.post-item:hover .post-controls {
+  display: block;
+}
+.post-input input,
+.post-input textarea,
+.post-button {
+  width: 90%;
+  padding: 5px;
+  margin: 2px;
+}
+.post-input textarea {
+  min-height: 100px;
+}
+.post-button {
+  border-radius: 5px;
+  background: lightblue;
+  font-size: 20px;
+}
+.edit-header {
+  width: 70%;
+  margin-bottom: 10px;
+}
+.edit-body {
+  width: 90%;
+  min-height: 150px;
+}
+.create-button-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  box-sizing: border-box;
+  width: 30%;
+  margin: 1%;
+  padding: 10px;
+}
+.create-btn {
+  margin-top: 30px;
+  height: 80px;
+  width: 80px;
+  outline: none;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: 64px;
+  color: white;
+}

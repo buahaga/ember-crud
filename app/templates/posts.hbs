@@ -1,0 +1,10 @@
+{{#each model as |post|}}
+  {{post-item post=post}}
+{{/each}}
+
+
+{{#if showPostForm}}
+  {{post-new-item hide=(action "toggleForm")}}
+{{else}}
+  {{create-button show=(action "toggleForm")}}
+{{/if}}
