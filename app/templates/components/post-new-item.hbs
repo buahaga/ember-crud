@@ -1,4 +1,4 @@
-<form class="post-publish">
+<form class="post-publish" {{action "publishPost" on="submit"}}>
   <div class="post-header">
     <h3>New Post:</h3>
     <button class="post-remove" {{action "closeForm" post}}>&#10007;</button>
@@ -9,5 +9,5 @@
   <div class="post-input">
     {{textarea value=body placeholder="body"}}
   </div>
-  <button {{action "publishPost"}} class="post-button">Publish</button>
+  <button class="post-button" type="submit">Publish</button>
 </form>

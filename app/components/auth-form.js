@@ -13,7 +13,7 @@ export default Component.extend({
            password: this.get('password')
       }).then(function() {
         this.router.transitionTo('posts');
-      }.bind(this));
+      }.bind(this)).catch(alert);
     },
     signOut: function() {
       this.get('session').close();
