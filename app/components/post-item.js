@@ -1,32 +1,22 @@
 import Component from '@ember/component';
-import { inject } from '@ember/service';
 
 export default Component.extend({
   tagName: 'span',
-  store: inject(),
   editable: false,
   editTitle: '',
   editBody: '',
   actions: {
-    editPost: function(post) {
-      this.set('editable', !this.get('editable'));
+    edit: function(post) {
+      this.toggleProperty('editable');
       this.set('editTitle', post.title);
       this.set('editBody', post.body);
     },
-    updatePost: function(post) {
-      this.set('editable', !this.get('editable'));
-      this.store.find('post', post.id).then((rec) => {
-        rec.set('title', this.editTitle);
-        rec.set('body', this.editBody);
-        rec.save();
-      });
+    update: function(post) {
+      this.toggleProperty('editable');
+      this.update(post, this.editTitle, this.editBody);
     },
-    removePost: function(post) {
-      if(confirm('Are you sure to delete this post?')) {
-        this.store.find('post', post.id).then(function(rec) {
-          rec.destroyRecord();
-        });
-      }
+    remove: function(post) {
+      this.remove(post);
     }
   }
 });

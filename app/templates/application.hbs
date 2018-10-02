@@ -1,6 +1,6 @@
 <div class="menu">
-  {{main-nav}}
-  {{auth-form}}
+  {{main-nav isAuthenticated=session.isAuthenticated}}
+  {{auth-form userName=session.currentUser.email logIn=(action "signIn") logOut=(action "signOut")}}
 </div>
 
 <div class="content">
@@ -8,5 +8,5 @@
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
 
   {{outlet}}
-  
+
 </div>

@@ -1,7 +1,7 @@
-<form class="post-publish" {{action "publishPost" on="submit"}}>
+<form class="post-publish" {{action "publish" on="submit"}}>
   <div class="post-header">
     <h3>New Post:</h3>
-    <button class="post-remove" {{action "closeForm" post}}>&#10007;</button>
+    <button class="post-remove" {{action "close"}}>&#10007;</button>
   </div>
   <div class="post-input">
     {{input value=title placeholder="title"}}

@@ -1,9 +1,9 @@
 {{#each model as |post|}}
-  {{post-item post=post}}
+  {{post-item post=post update=(action "updatePost") remove=(action "removePost")}}
 {{/each}}
 
 {{#if showPostForm}}
-  {{post-new-item hide=(action "toggleForm")}}
+  {{post-new-item publish=(action "publishPost") close=(action "toggleForm")}}
 {{else}}
   {{create-button show=(action "toggleForm")}}
 {{/if}}

@@ -1,10 +1,10 @@
-{{#if session.isAuthenticated}}
+{{#if userName}}
   <div class="auth-form">
-    {{session.currentUser.email}}
-    <button {{action "signOut"}} class="auth-btn">Sign out</button>
+    {{userName}}
+    <button {{action "logOut"}} class="auth-btn">Sign out</button>
   </div>
 {{else}}
-  <form class="auth-form" {{action "signIn" on="submit"}}>
+  <form class="auth-form" {{action "logIn" on="submit"}}>
     {{input type="email" value=email placeholder="admin@gmail.com"}}
     {{input type="password" value=password placeholder="123456"}}
     <button class="auth-btn" type="submit">Sign In</button>
