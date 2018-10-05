@@ -1,0 +1,25 @@
+<form class="input-group">
+  {{#link-to "posts" (query-params sortQuery="title:asc") class="sort-query"}}
+    <input type="checkbox"/><label class="{{if sortByTitle 'label-active'}}">A - Z &#8595;</label>
+  {{/link-to}}
+  {{#link-to "posts" (query-params sortQuery="timestamp:desc") class="sort-query"}}
+    <input type="checkbox"/><label class="{{if sortByTime 'label-active'}}">Most recent &#8593;</label>
+  {{/link-to}}
+</form>
+
+<form class="input-group">
+  {{#link-to "posts" (query-params filterQuery="day") class="sort-query"}}
+    <input type="checkbox"><label class="{{if filterDay 'label-active'}}">Today</label>
+  {{/link-to}}
+  {{#link-to "posts" (query-params filterQuery="hour") class="sort-query"}}
+    <input type="checkbox"><label class="{{if filterHour 'label-active'}}">Last Hour</label>
+  {{/link-to}}
+  {{#link-to "posts" (query-params filterQuery=null) class="sort-query"}}
+    <input type="checkbox"><label>Clear Filter</label>
+  {{/link-to}}
+</form>
+
+<form class="input-group">
+  {{input type="checkbox" checked=isList}}<label class="list" {{action "toggle"}}>.</label>
+  {{input type="checkbox" checked=(if isList false true)}}<label class="grid" {{action "toggle"}}>.</label>
+</form>

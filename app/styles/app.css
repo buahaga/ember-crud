@@ -44,7 +44,11 @@
   padding: 10px;
   border: thin solid grey;
   box-shadow: 5px 5px 2px lightgrey;
-  transition: all 0.3s;
+  transition: all 0.1s;
+}
+.post-item.post-item-list {
+  display: block;
+  width: 90%;
 }
 .post-header {
   display: flex;
@@ -110,4 +114,54 @@
 }
 .create-btn:hover {
   background: lightgreen;
+}
+.input-group {
+  display: inline-block;
+  margin: 20px;
+}
+.input-group input {
+  display: none;
+}
+.input-group label {
+  display: inline-block;
+  border: thin solid grey;
+  font-weight: bold;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+.input-group input:checked + label {
+  background: lightgrey;
+}
+label.label-active {
+  background: lightgrey;
+}
+.grid, .list {
+  background-image: url(/grid.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  color: white;
+}
+.list {
+  background-image: url(/list.png);
+}
+.input-group input:checked + label.list {
+  background: lightgrey;
+  background-image: url(/list.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  color: lightgrey;
+}
+.input-group input:checked + label.grid {
+  background: lightgrey;
+  background-image: url(/grid.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  color: lightgrey;
+}
+.sort-query {
+  color: black;
+  text-decoration: none;
 }

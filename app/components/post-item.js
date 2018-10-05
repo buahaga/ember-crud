@@ -1,8 +1,10 @@
 import Component from '@ember/component';
+import { sort } from '@ember/object/computed';
 
 export default Component.extend({
   tagName: 'span',
   editable: false,
+  isList: false,
   editTitle: '',
   editBody: '',
   actions: {

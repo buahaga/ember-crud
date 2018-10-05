@@ -7,6 +7,6 @@ export default Route.extend({
     }
   },
   model() {
-    return this.store.findAll('post');
+    return this.store.findAll('post')
   }
 });

@@ -1,5 +1,7 @@
-{{#each model as |post|}}
-  {{post-item post=post update=(action "updatePost") remove=(action "removePost")}}
+{{posts-controls isList=isList sort=sortQuery filter=filterQuery toggle=(action "toggleView")}}
+
+{{#each posts as |post|}}
+  {{post-item isList=isList post=post update=(action "updatePost") remove=(action "removePost")}}
 {{/each}}
 
 {{#if showPostForm}}
